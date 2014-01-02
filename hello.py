@@ -13,7 +13,7 @@ servers.wait_for_occupied_port = fake_wait_for_occupied_port
 
 class HelloWorld(object):
     def index(self):
-        return "Hello World!"
+        return "Hello World test 2!"
     index.exposed = True
 
 
