@@ -1,2 +1,2 @@
-web: python hello.py $PATH
+web: python hotTubServer.py $PATH
 heroku ps:scale web=1
