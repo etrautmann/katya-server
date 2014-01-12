@@ -38,8 +38,8 @@ class Page:
     #           ''' % (self.tempSetPoint, self.currentTemp)
 
     def contents(self):
-        return ''' {"heaterOn": 1, 
-                    "setTemp": 100}
+        return ''' {"heaterOn": "true", 
+                    "setTemp": "100"}
                     '''
 
             
