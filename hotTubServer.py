@@ -17,25 +17,32 @@ servers.wait_for_occupied_port = fake_wait_for_occupied_port
 #     index.exposed = True
 
 
+
+
 class Page:
-    def contents(self):
-        return '''
-            Temperature setpoint: %s
+    # def contents(self):
+    #     return '''
+    #         Temperature setpoint: %s
 
-            <p></p>
-            <p></p>
-            <p></p>
+    #         <p></p>
+    #         <p></p>
+    #         <p></p>
             
-            <form action="setTemp" method="GET">
-            Enter Temperature Setpoint
-            <input type="text" name="name" />
-            <input type="submit" />
-            </form>
+    #         <form action="setTemp" method="GET">
+    #         Enter Temperature Setpoint
+    #         <input type="text" name="name" />
+    #         <input type="submit" />
+    #         </form>
 
-            Current Temperature: %s 
+    #         Current Temperature: %s 
+    #           ''' % (self.tempSetPoint, self.currentTemp)
 
+    def contents(self):
+        return ''' {"heaterOn": 1, 
+                    "setTemp"; 100}
+                    '''
 
-            ''' % (self.tempSetPoint, self.currentTemp)
+            
 
 class WelcomePage(Page):
 
@@ -75,8 +82,15 @@ class WelcomePage(Page):
     setTemp.exposed = True
 
 
-root = WelcomePage()
+class state():
 
+    def index(self):
+
+        return
+
+
+root = WelcomePage()
+root.state = state()
 
 
 cherrypy.config.update({'server.socket_host': '0.0.0.0',})
