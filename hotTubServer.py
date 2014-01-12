@@ -39,7 +39,7 @@ class Page:
 
     def contents(self):
         return ''' {"heaterOn": 1, 
-                    "setTemp"; 100}
+                    "setTemp": 100}
                     '''
 
             
